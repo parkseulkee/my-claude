@@ -1,0 +1,31 @@
+# Generated files (run install.sh to regenerate)
+settings.json
+
+# Runtime & session data
+history.jsonl
+stats-cache.json
+mcp-needs-auth-cache.json
+policy-limits.json
+
+# Machine-specific / ephemeral directories
+backups/
+cache/
+debug/
+downloads/
+file-history/
+paste-cache/
+plans/
+projects/
+session-env/
+sessions/
+shell-snapshots/
+tasks/
+todos/
+memory/
+
+# Hook integrity file (machine-specific)
+hooks/.rtk-hook.sha256
+
+# Python cache
+**/__pycache__/
+*.pyc
