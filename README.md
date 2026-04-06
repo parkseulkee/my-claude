@@ -36,6 +36,12 @@ cd ~/.claude
 brew install terminal-notifier
 ```
 
+설치 후 macOS 알림 권한 활성화:
+
+1. **시스템 설정 → 알림**
+2. 목록에서 **terminal-notifier** 선택
+3. **알림 허용** 켜기
+
 ### PreToolUse — rtk-rewrite
 
 Intercepts every `Bash` tool call and rewrites the command through `rtk` for token savings.
