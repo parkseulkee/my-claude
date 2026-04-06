@@ -28,6 +28,47 @@ cd ~/.claude
 | `skills/` | Custom skills: brainstorming, skill-creator, slash-command-creator, subagent-creator |
 | `install.sh` | Generates `settings.json` and sets permissions |
 
+## Hooks
+
+### Prerequisites
+
+```bash
+brew install terminal-notifier
+```
+
+### PreToolUse — rtk-rewrite
+
+Intercepts every `Bash` tool call and rewrites the command through `rtk` for token savings.
+
+```json
+{
+  "matcher": "Bash",
+  "hooks": [{ "type": "command", "command": "__HOME__/.claude/hooks/rtk-rewrite.sh" }]
+}
+```
+
+### Notification — input needed
+
+Fires when Claude is waiting for your response (e.g. during a long task).
+
+```json
+{
+  "matcher": "",
+  "hooks": [{ "type": "command", "command": "terminal-notifier -title \"Claude Code\" -message \"Your input is needed\" -sound default" }]
+}
+```
+
+### Stop — task finished
+
+Fires when Claude has fully completed a task.
+
+```json
+{
+  "matcher": "",
+  "hooks": [{ "type": "command", "command": "terminal-notifier -title \"Claude Code\" -message \"Claude Code has finished\" -sound default" }]
+}
+```
+
 ## What's excluded
 
 Runtime and machine-specific data are gitignored:
