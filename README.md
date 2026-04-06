@@ -36,11 +36,11 @@ cd ~/.claude
 brew install terminal-notifier
 ```
 
-설치 후 macOS 알림 권한 활성화:
+After installing, enable macOS notification permission:
 
-1. **시스템 설정 → 알림**
-2. 목록에서 **terminal-notifier** 선택
-3. **알림 허용** 켜기
+1. **System Settings → Notifications**
+2. Select **terminal-notifier** from the list
+3. Toggle **Allow notifications** on
 
 ### PreToolUse — rtk-rewrite
 
