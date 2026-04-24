@@ -20,12 +20,12 @@ Create a task for each item and complete in order:
 3. **Ask clarifying questions** — one at a time: purpose, constraints, success criteria
 4. **Propose 2-3 approaches** — with trade-offs and a clear recommendation
 5. **Present design sections** — get approval after each section before continuing
-6. **Write design doc** — `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md`, commit it
+6. **Write design doc** — `docs/plans/brainstorming/YYYY-MM-DD-<topic>.md`, commit it
 7. **Spec self-review** — fix placeholders, contradictions, ambiguity, scope issues inline
 8. **User reviews spec** — ask user to review; wait for approval before continuing
-9. **Invoke writing-plans** — transition to implementation planning
+9. **Invoke explore-plan-code** — transition to implementation planning
 
-**Terminal state is writing-plans.** Never invoke any other implementation skill.
+**Terminal state is explore-plan-code.** Never invoke any other implementation skill.
 
 ## Process
 
@@ -45,9 +45,10 @@ For detailed design principles and anti-patterns → `references/design-principl
 
 ## After the Design
 
-**Write spec** to `docs/superpowers/specs/YYYY-MM-DD-<topic>-design.md` and commit to git.
+**Write spec** to `docs/plans/brainstorming/YYYY-MM-DD-<topic>.md` and commit to git.
 
 **Self-review** (fix inline — no need to re-review):
+
 - Placeholders or TBDs? Fill them in.
 - Internal contradictions? Resolve them.
 - Scope: focused enough for a single implementation plan?
@@ -56,9 +57,10 @@ For detailed design principles and anti-patterns → `references/design-principl
 For dispatching a subagent spec reviewer → `references/spec-reviewer.md`
 
 **User review gate:** After passing self-review, ask:
+
 > "Spec written and committed to `<path>`. Please review it and let me know if you'd like any changes before we start the implementation plan."
 
-Wait for the user's response. Make changes if requested, re-run self-review. Only invoke writing-plans once the user approves.
+Wait for the user's response. Make changes if requested, re-run self-review. Only invoke explore-plan-code once the user approves.
 
 ## Key Principles
 
@@ -73,9 +75,11 @@ Wait for the user's response. Make changes if requested, re-run self-review. Onl
 A browser-based tool for mockups, diagrams, and visual options. A tool, not a mode — decide per question, not per session.
 
 **Offer once** when you anticipate visual questions (its own message, no other content):
+
 > "Some of what we're working on might be easier to explain visually. I can show mockups, diagrams, and comparisons in a web browser as we go. This is still new and can be token-intensive. Want to try it? (Requires opening a local URL)"
 
-**Per-question test:** Would the user understand this better by *seeing* it than *reading* it?
+**Per-question test:** Would the user understand this better by _seeing_ it than _reading_ it?
+
 - **Browser:** mockups, wireframes, layout comparisons, architecture diagrams
 - **Terminal:** requirements questions, conceptual choices, tradeoff lists, clarifying questions
 

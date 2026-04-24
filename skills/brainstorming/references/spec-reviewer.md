@@ -2,7 +2,7 @@
 
 Dispatch a subagent to review the spec document after writing it.
 
-**When to use:** After writing spec to `docs/superpowers/specs/`. Catches issues before the user review gate.
+**When to use:** After writing spec to `docs/plans/brainstorming/`. Catches issues before the user review gate.
 
 ## Dispatch Prompt
 
