@@ -26,6 +26,9 @@ memory/
 # Hook integrity file (machine-specific)
 hooks/.rtk-hook.sha256
 
+# Plugins (reinstall from marketplace on each machine)
+plugins/
+
 # Python cache
 **/__pycache__/
 *.pyc
