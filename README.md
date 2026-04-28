@@ -16,6 +16,7 @@ cd ~/.claude
 
 - [rtk](https://github.com/rtk-ai/rtk#installation) >= 0.23.0
 - [jq](https://jqlang.github.io/jq/download/)
+- [terminal-notifier](https://github.com/julienXX/terminal-notifier) — required for the Stop hook (`brew install terminal-notifier`)
 
 ## What's included
 
@@ -29,18 +30,6 @@ cd ~/.claude
 | `install.sh`             | Generates `settings.json` and sets permissions                                       |
 
 ## Hooks
-
-### Prerequisites
-
-```bash
-brew install terminal-notifier
-```
-
-After installing, enable macOS notification permission:
-
-1. **System Settings → Notifications**
-2. Select **terminal-notifier** from the list
-3. Toggle **Allow notifications** on
 
 ### PreToolUse — rtk-rewrite
 
@@ -66,22 +55,6 @@ Runs `prettier --write` on every file modified by `Edit` or `Write` tool calls.
     {
       "type": "command",
       "command": "jq -r '.tool_input.file_path' | xargs npx prettier --write"
-    }
-  ]
-}
-```
-
-### Notification — input needed
-
-Fires when Claude is waiting for your response (e.g. during a long task).
-
-```json
-{
-  "matcher": "",
-  "hooks": [
-    {
-      "type": "command",
-      "command": "terminal-notifier -title \"Claude Code\" -message \"Your input is needed\" -sound default"
     }
   ]
 }
