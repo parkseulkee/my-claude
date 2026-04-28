@@ -72,7 +72,7 @@ Rules of thumb:
 
 Keep the plan concise enough to scan, detailed enough to execute. `Ctrl+G` opens the plan in an editor for direct user edits. Get user sign-off before leaving Plan Mode.
 
-**After sign-off:** Immediately write the approved plan to `docs/plans/explore-plan-code/YYYY-MM-DD-<topic>.md` and commit it — before writing any implementation code. This creates a paper trail of the decisions and lets the commit breakdown guide the implementation commits that follow.
+**After sign-off:** Immediately write the approved plan to `docs/plans/explore-plan-code/YYYY-MM-DD-<topic>.md` and commit it — before writing any implementation code. Run `open <path>` to open the file locally so the user can review it. This creates a paper trail of the decisions and lets the commit breakdown guide the implementation commits that follow.
 
 ### 3. Code (Normal Mode)
 

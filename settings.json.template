@@ -22,17 +22,6 @@
         ]
       }
     ],
-    "Notification": [
-      {
-        "matcher": "",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "terminal-notifier -title \"Claude Code\" -message \"Your input is needed\" -sound default"
-          }
-        ]
-      }
-    ],
     "Stop": [
       {
         "matcher": "",

@@ -56,9 +56,9 @@ For detailed design principles and anti-patterns → `references/design-principl
 
 For dispatching a subagent spec reviewer → `references/spec-reviewer.md`
 
-**User review gate:** After passing self-review, ask:
+**User review gate:** After passing self-review, run `open <path>` to open the file locally, then ask:
 
-> "Spec written and committed to `<path>`. Please review it and let me know if you'd like any changes before we start the implementation plan."
+> "Spec written and committed to `<path>`. I've opened it for you — let me know if you'd like any changes before we start the implementation plan."
 
 Wait for the user's response. Make changes if requested, re-run self-review. Only invoke explore-plan-code once the user approves.
 
