@@ -19,14 +19,13 @@ cd ~/.claude
 
 ## What's included
 
-| Path                     | Description                                                                          |
-| ------------------------ | ------------------------------------------------------------------------------------ |
-| `CLAUDE.md`              | Global Claude Code instructions                                                      |
-| `RTK.md`                 | RTK (Rust Token Killer) documentation                                                |
-| `settings.json.template` | Hook config template (`__HOME__` placeholder)                                        |
-| `hooks/rtk-rewrite.sh`   | PreToolUse hook — rewrites commands through `rtk` for token savings                  |
-| `skills/`                | Custom skills: brainstorming, skill-creator, slash-command-creator, subagent-creator |
-| `install.sh`             | Generates `settings.json` and sets permissions                                       |
+| Path                     | Description                                                                                             |
+| ------------------------ | ------------------------------------------------------------------------------------------------------- |
+| `CLAUDE.md`              | Global Claude Code behavioral guidelines (Korean)                                                       |
+| `settings.json.template` | Hook config template (`__HOME__` placeholder)                                                           |
+| `hooks/rtk-rewrite.sh`   | PreToolUse hook — rewrites commands through `rtk` for token savings                                     |
+| `skills/`                | Custom skills: brainstorming, explore-plan-code, skill-creator, slash-command-creator, subagent-creator |
+| `install.sh`             | Generates `settings.json` and sets permissions                                                          |
 
 ## Hooks
 
