@@ -47,22 +47,6 @@ Intercepts every `Bash` tool call and rewrites the command through `rtk` for tok
 }
 ```
 
-### PostToolUse — prettier
-
-Runs `prettier --write` on every file modified by `Edit` or `Write` tool calls.
-
-```json
-{
-  "matcher": "Edit|Write",
-  "hooks": [
-    {
-      "type": "command",
-      "command": "jq -r '.tool_input.file_path' | xargs npx prettier --write"
-    }
-  ]
-}
-```
-
 ## What's excluded
 
 Runtime and machine-specific data are gitignored:
