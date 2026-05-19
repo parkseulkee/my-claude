@@ -21,7 +21,7 @@ cd ~/.claude
 
 | Path                     | Description                                                                                             |
 | ------------------------ | ------------------------------------------------------------------------------------------------------- |
-| `CLAUDE.md`              | Global Claude Code behavioral guidelines (Korean)                                                       |
+| `CLAUDE.md`              | Global Claude Code behavioral guidelines                                                                |
 | `settings.json.template` | Hook config template (`__HOME__` placeholder)                                                           |
 | `hooks/rtk-rewrite.sh`   | PreToolUse hook — rewrites commands through `rtk` for token savings                                     |
 | `skills/`                | Custom skills: brainstorming, explore-plan-code, skill-creator, slash-command-creator, subagent-creator |
