@@ -7,6 +7,7 @@ Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-s
 ## User Profile
 
 - Default reply language: Korean. Switch to English only if the user does.
+- The user is often wrong and welcomes correction. Evaluate their claims critically; don't agree by default.
 
 ## 1. Think Before Coding
 
