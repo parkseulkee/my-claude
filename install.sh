@@ -26,14 +26,37 @@ if [ ! -f "$TEMPLATE" ]; then
   exit 1
 fi
 
-sed "s|__HOME__|$HOME|g" "$TEMPLATE" > "$OUTPUT"
-echo "[install] Generated settings.json (HOME=$HOME)"
+RENDERED="$(sed "s|__HOME__|$HOME|g" "$TEMPLATE")"
+if [ -f "$OUTPUT" ]; then
+  if ! command -v jq &>/dev/null; then
+    echo "[install] ERROR: jq is required to merge hooks into existing settings.json"
+    exit 1
+  fi
+  TMP="$(mktemp)"
+  jq -s '.[0] * {hooks: .[1].hooks}' "$OUTPUT" <(printf '%s' "$RENDERED") > "$TMP"
+  mv "$TMP" "$OUTPUT"
+  echo "[install] Merged hooks into existing settings.json (preserved enabledPlugins/marketplaces)"
+else
+  printf '%s' "$RENDERED" > "$OUTPUT"
+  echo "[install] Generated settings.json (HOME=$HOME)"
+fi
 
 # --- Ensure hook is executable ---
 HOOK="$CLAUDE_DIR/hooks/rtk-rewrite.sh"
 if [ -f "$HOOK" ]; then
   chmod +x "$HOOK"
   echo "[install] Hook permissions set: $HOOK"
+fi
+
+# --- Install Claude Code plugins ---
+if command -v claude &>/dev/null; then
+  echo "[install] Adding marketplace: anthropics/claude-plugins-official"
+  claude plugin marketplace add anthropics/claude-plugins-official
+
+  echo "[install] Installing plugin: claude-md-management@claude-plugins-official"
+  claude plugin install claude-md-management@claude-plugins-official --scope user
+else
+  echo "[install] WARNING: 'claude' CLI not found. Skipping plugin installation."
 fi
 
 echo "[install] Done. Claude Code configuration is ready."

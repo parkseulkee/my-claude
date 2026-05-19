@@ -10,12 +10,17 @@ cd ~/.claude
 ./install.sh
 ```
 
-`install.sh` generates `settings.json` with the correct `$HOME` path and sets hook permissions.
+`install.sh`:
+
+- Generates `settings.json` from the template (or merges hooks into an existing one, preserving `enabledPlugins` / `extraKnownMarketplaces`).
+- Sets hook permissions.
+- Adds the `anthropics/claude-plugins-official` marketplace and installs `claude-md-management@claude-plugins-official` at user scope.
 
 ## Prerequisites
 
 - [rtk](https://github.com/rtk-ai/rtk#installation) >= 0.23.0
 - [jq](https://jqlang.github.io/jq/download/)
+- `claude` CLI on PATH (required for plugin install step)
 
 ## What's included
 
