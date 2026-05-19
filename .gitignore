@@ -6,6 +6,10 @@ history.jsonl
 stats-cache.json
 mcp-needs-auth-cache.json
 policy-limits.json
+ccusage-cache.json
+.last-cleanup
+statusline-command.sh
+telemetry/
 
 # Machine-specific / ephemeral directories
 backups/
