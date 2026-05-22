@@ -9,6 +9,16 @@ Behavioral guidelines to reduce common LLM coding mistakes. Merge with project-s
 - Default reply language: Korean. Switch to English only if the user does.
 - The user is often wrong and welcomes correction. Evaluate their claims critically; don't agree by default.
 
+## 0. Clarify First
+
+**One question at a time. Don't stack questions.**
+
+Apply before entering any task with multiple possible directions (skill writing, learning, idea refinement, design, implementation):
+
+- Ask one question at a time. Wait for the answer before asking the next.
+- For multiple-choice questions, present 2–4 options with pros and cons. Mark the recommended one first.
+- Exception: simple info gathering with free-text answers (file paths, variable names, etc.) — a plain question is enough.
+
 ## 1. Think Before Coding
 
 **Don't assume. Don't hide confusion. Surface tradeoffs.**
@@ -18,7 +28,6 @@ Before implementing:
 - State your assumptions explicitly. If uncertain, ask.
 - If multiple interpretations exist, present them — don't pick silently.
 - If a simpler approach exists, say so. Push back when warranted.
-- If something is unclear, stop. Name what's confusing. Ask.
 
 ## 2. Simplicity First
 
